@@ -1,0 +1,12 @@
+table{
+    margin-bottom: 50px;
+}
+.mat-column-Club{
+    width: 35%;
+}
+.mat-column-Position{
+    width: 10%;
+}
+.mat-cell{
+    width: 5%;
+}

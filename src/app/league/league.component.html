@@ -1,0 +1,23 @@
+<h1 style="text-align: center;"> League Lists </h1>
+
+<!-- <mat-grid-list cols="4" rowHeight="2:1">
+  <mat-grid-tile *ngFor="let league of leagues;">
+    <a href="league-standing/{{league.id}}">
+      <mat-card> 
+        <img src="../../assets/football-image.png" width="100px" height="100px"/> 
+        <p>{{ league.name  }}({{ league.id  }})</p>
+      </mat-card>
+    </a>
+  </mat-grid-tile>
+</mat-grid-list> -->
+<mat-list>
+  <mat-list-item *ngFor="let league of leagues;"> 
+    <a href="league-standing/{{league.id}}">
+      <img src="../../assets/football-image.png" width="30px" height="30px"/> {{ league.name  }}({{ league.id  }}) 
+    </a>
+    </mat-list-item>
+ </mat-list>
+
+<!-- <ul *ngFor="let league of leagues;">
+    <li> {{ league.name  }}</li>
+</ul> -->
