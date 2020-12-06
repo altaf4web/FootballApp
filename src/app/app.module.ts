@@ -44,6 +44,7 @@ import { MatTreeModule } from '@angular/material/tree';
 import { LeagueComponent } from './league/league.component';
 import { AppRoutingModule } from './app-routing.module';
 import { LeagueTableComponent } from './league-table/league-table.component';
+
 @NgModule({
   declarations: [
     AppComponent,
