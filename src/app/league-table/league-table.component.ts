@@ -1,5 +1,6 @@
 import { ApiService } from '../api.service';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-league-table',
@@ -8,35 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LeagueTableComponent implements OnInit {
   leagueID: string;
+  id: string
   // leagues: any = [];
   leagues : any = [];
   displayedColumns: string[] = ['Position', 'Club', 'MP', 'W', 'D', 'L', 'GF', 'GA', 'GD', 'PTS', 'LAST 5' ];
   
-  constructor(private apiService : ApiService){}
-  
+  constructor(private apiService : ApiService, private route: ActivatedRoute){
+     this.id = route.snapshot.params.id;
+  }
   ngOnInit(): void {
-    this.leagueID = "1204";
+    this.leagueID = this.id;
+    console.log(this.id);
     this.apiService.getLeagueTable(this.leagueID).subscribe((data)=>{
       console.log(data);
       this.leagues = data;
       
     });
   }
-
 }
-// export class LeagueTableComponent implements OnInit {
-//   leagueID: string;
-//   leagues: any = [];
-
-//   constructor(private apiService: ApiService) { }
-  
-//   ngOnInit(): void {
-//     this.leagueID = "1204";
-//     this.apiService.getLeagueTable(this.leagueID).subscribe((data)=>{
-//       console.log(data);
-//       this.leagues = data;
-//     });
-//     }
-
-// }
-

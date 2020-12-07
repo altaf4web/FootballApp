@@ -3,3 +3,10 @@
 
 html, body { height: 100%; }
 body { margin: 50px; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-tab-group{
+    margin: 0px 0px 30px;
+}
+.mat-tab-body-wrapper{
+    padding: 30px 0px 0px;
+}

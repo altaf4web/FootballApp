@@ -5,7 +5,7 @@ import { LeagueTableComponent } from './league-table/league-table.component';
 
 const routes: Routes = [
   {path:'leagues', component: LeagueComponent},
-  {path: 'league-standing' , component: LeagueTableComponent},
+  {path: 'league-standing/:id' , component: LeagueTableComponent},
   { path: '',   redirectTo: '/leagues', pathMatch: 'full' }, // redirect to `first-component`
 ];
 
